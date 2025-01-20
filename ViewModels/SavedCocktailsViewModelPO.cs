@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace ExamenPOP3.ViewModels
 {
-    public partial class SavedCocktailsViewModel : ObservableObject
+    public partial class SavedCocktailsViewModelPO : ObservableObject
     {
-        private readonly CocktailDatabase _database;
+        private readonly CocktailDatabasePO _database;
         [ObservableProperty]
-        private List<SavedCocktail> savedCocktails;
+        private List<SavedCocktailPO> savedCocktails;
        
-        public SavedCocktailsViewModel(CocktailDatabase database)
+        public SavedCocktailsViewModelPO(CocktailDatabasePO database)
         {
             _database = database;
             LoadCocktails();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamenPOP3.Models
 {
-    public class Cocktail
+    public class CocktailPO
     {
         public string IdDrink { get; set; }
         public string StrDrink { get; set; }

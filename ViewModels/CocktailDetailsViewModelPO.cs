@@ -10,25 +10,25 @@ using ExamenPOP3.Services;
 
 namespace ExamenPOP3.ViewModels
 {
-    public partial class CocktailDetailsViewModel : ObservableObject
+    public partial class CocktailDetailsViewModelPO : ObservableObject
     {
-        public CocktailDetailsViewModel()
+        public CocktailDetailsViewModelPO()
         {
 
         }
 
-        private readonly CocktailDatabase _database;
+        private readonly CocktailDatabasePO _database;
         [ObservableProperty]
-        private Cocktail selectedCocktail;
+        private CocktailPO selectedCocktail;
         public IRelayCommand SaveCommand { get; }
-        public CocktailDetailsViewModel(CocktailDatabase database)
+        public CocktailDetailsViewModelPO(CocktailDatabasePO database)
         {
             _database = database;
             SaveCommand = new RelayCommand(SaveCocktail);
         }
         private async void SaveCocktail()
         {
-            var savedCocktail = new SavedCocktail
+            var savedCocktail = new SavedCocktailPO
             {
                 Name = SelectedCocktail.StrDrink,
                 Category = SelectedCocktail.StrCategory,

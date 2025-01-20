@@ -8,6 +8,6 @@ public partial class SavedCocktailsPage : ContentPage
     {
         InitializeComponent();
 
-        BindingContext = new SavedCocktailsViewModel(App.Database);
+        BindingContext = new SavedCocktailsViewModelPO(App.Database);
     }
 }

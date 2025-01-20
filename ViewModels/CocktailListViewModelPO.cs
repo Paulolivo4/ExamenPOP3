@@ -10,14 +10,14 @@ using ExamenPOP3.Services;
 
 namespace ExamenPOP3.ViewModels
 {
-    public partial class CocktailListViewModel : ObservableObject
+    public partial class CocktailListViewModelPO : ObservableObject
     {
-        private readonly CocktailService _service;
+        private readonly CocktailServicePO _service;
         [ObservableProperty]
-        private List<Cocktail> cocktails;
-        public CocktailListViewModel()
+        private List<CocktailPO> cocktails;
+        public CocktailListViewModelPO()
         {
-            _service = new CocktailService();
+            _service = new CocktailServicePO();
             LoadCocktailsCommand = new AsyncRelayCommand<string>(LoadCocktails);
         }
         public IAsyncRelayCommand<string> LoadCocktailsCommand { get; }

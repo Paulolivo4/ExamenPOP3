@@ -3,11 +3,11 @@ using ExamenPOP3.ViewModels;
 
 public partial class CocktailListPage : ContentPage
 {
-    private CocktailListViewModel _viewModel;
+    private CocktailListViewModelPO _viewModel;
     public CocktailListPage()
     {
         InitializeComponent();
-        _viewModel = BindingContext as CocktailListViewModel;
+        _viewModel = BindingContext as CocktailListViewModelPO;
     }
     private async void OnSearchBarTextChanged(object sender, TextChangedEventArgs e)
     {

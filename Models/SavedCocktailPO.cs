@@ -8,7 +8,7 @@ using SQLite;
 
 namespace ExamenPOP3.Models
 {
-    public class SavedCocktail
+    public class SavedCocktailPO
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

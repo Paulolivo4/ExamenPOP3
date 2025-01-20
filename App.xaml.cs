@@ -4,8 +4,8 @@ namespace ExamenPOP3;
 public partial class App : Application
 {
     
-    private static CocktailDatabase _database;
-    public static CocktailDatabase Database
+    private static CocktailDatabasePO _database;
+    public static CocktailDatabasePO Database
     {
         get
         {
@@ -13,7 +13,7 @@ public partial class App : Application
             {
                 // Ruta de la base de datos 
                 string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Cocktails.db3");
-                _database = new CocktailDatabase(dbPath);
+                _database = new CocktailDatabasePO(dbPath);
             }
             return _database;
         }

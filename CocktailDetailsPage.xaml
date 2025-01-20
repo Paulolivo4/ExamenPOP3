@@ -4,7 +4,7 @@
             x:Class="ExamenPOP3.CocktailDetailsPage"
             Title="Cocktail Details">
     <ContentPage.BindingContext>
-        <vm:CocktailDetailsViewModel />
+        <vm:CocktailDetailsViewModelPO />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Padding="10">
