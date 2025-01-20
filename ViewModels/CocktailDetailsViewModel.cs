@@ -12,6 +12,11 @@ namespace ExamenPOP3.ViewModels
 {
     public partial class CocktailDetailsViewModel : ObservableObject
     {
+        public CocktailDetailsViewModel()
+        {
+
+        }
+
         private readonly CocktailDatabase _database;
         [ObservableProperty]
         private Cocktail selectedCocktail;

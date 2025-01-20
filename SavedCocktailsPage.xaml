@@ -1,0 +1,22 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="ExamenPOP3.SavedCocktailsPage"
+            Title="Saved Cocktails">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <CollectionView ItemsSource="{Binding SavedCocktails}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Image Source="{Binding ImageUrl}" WidthRequest="50" HeightRequest="50" />
+                            <StackLayout VerticalOptions="Center" Padding="10,0,0,0">
+                                <Label Text="{Binding Name}" FontSize="16" />
+                                <Label Text="{Binding Category}" FontSize="12" TextColor="Gray" />
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

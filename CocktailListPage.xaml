@@ -1,0 +1,28 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:vm="clr-namespace:ExamenPOP3.ViewModels"
+            x:Class="ExamenPOP3.CocktailListPage"
+            Title="Cocktail List">
+    <ContentPage.BindingContext>
+        <vm:CocktailListViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <SearchBar Placeholder="Search for a cocktail"
+                      TextChanged="OnSearchBarTextChanged"
+                      x:Name="SearchBar" />
+            <CollectionView ItemsSource="{Binding Cocktails}"
+                           SelectionMode="Single"
+                           SelectedItem="{Binding SelectedCocktail}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Image Source="{Binding StrDrinkThumb}" WidthRequest="50" HeightRequest="50" />
+                            <Label Text="{Binding StrDrink}" VerticalOptions="Center" FontSize="16" Margin="10,0,0,0" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

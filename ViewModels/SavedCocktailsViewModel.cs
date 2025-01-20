@@ -14,6 +14,7 @@ namespace ExamenPOP3.ViewModels
         private readonly CocktailDatabase _database;
         [ObservableProperty]
         private List<SavedCocktail> savedCocktails;
+       
         public SavedCocktailsViewModel(CocktailDatabase database)
         {
             _database = database;
